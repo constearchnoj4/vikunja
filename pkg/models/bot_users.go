@@ -96,12 +96,9 @@ func (b *BotUser) Update(s *xorm.Session, _ web.Auth) error {
 		return err
 	}
 
-	cols := []string{}
+	cols := []string{"name"}
+	existing.Name = b.Name
 
-	if b.Name != "" {
-		existing.Name = b.Name
-		cols = append(cols, "name")
-	}
 	if b.Status == user.StatusDisabled {
 		existing.Status = b.Status
 		cols = append(cols, "status")
