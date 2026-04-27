@@ -67,7 +67,7 @@ func getPropsForUser(u *user.User, palette []string) []*props {
 	for i := range 3 {
 		f := float64(getUnit(int(u.ID)*(i+1), avatarSize/10, 0))
 		ps = append(ps, &props{
-			Color:      palette[(int(u.ID)+i)%(len(palette)-1)],
+			Color:      palette[(int(u.ID)+i)%len(palette)],
 			TranslateX: getUnit(int(u.ID)*(i+1), avatarSize/10, 1),
 			TranslateY: getUnit(int(u.ID)*(i+1), avatarSize/10, 2),
 			Scale:      1.2 + f/10,
