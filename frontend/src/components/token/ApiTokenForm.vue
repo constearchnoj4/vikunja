@@ -217,6 +217,7 @@ function formatPermissionTitle(title: string): string {
 }
 
 async function createToken() {
+	newTokenTitleValid.value = newToken.value.title.trim() !== ''
 	if (!newTokenTitleValid.value) {
 		apiTokenTitle.value.focus()
 		return
