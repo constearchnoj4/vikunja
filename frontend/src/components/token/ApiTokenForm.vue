@@ -149,6 +149,7 @@ onMounted(async () => {
 function resetPermissions() {
 	newTokenPermissions.value = {}
 	newTokenPermissionsGroup.value = {}
+	newTokenPermissionValid.value = true
 	Object.entries(availableRoutes.value).forEach(entry => {
 		const [group, routes] = entry
 		newTokenPermissions.value[group] = {}
@@ -192,10 +193,14 @@ function selectPermissionGroup(group: string, checked: boolean) {
 		const [key] = entry
 		newTokenPermissions.value[group][key] = checked
 	})
+	if (checked) {
+		newTokenPermissionValid.value = true
+	}
 }
 
 function toggleGroupPermissionsFromChild(group: string, checked: boolean) {
 	if (checked) {
+		newTokenPermissionValid.value = true
 		let allChecked = true
 		Object.entries(availableRoutes.value[group]).forEach(entry => {
 			const [key] = entry
