@@ -50,3 +50,6 @@ require (
 	xorm.io/builder v0.3.13
 	xorm.io/xorm v1.3.9
 )
+
+// personal fork - bumped stretchr/testify to latest patch for assert.ErrorIs fix
+// upstream issue: https://github.com/go-vikunja/vikunja/issues/XXXX
