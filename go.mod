@@ -59,3 +59,8 @@ require (
 // below v0.17.0 are affected by CVE-2023-48795 (Terrapin SSH attack).
 // Bumped from v0.18.0 to v0.21.0 to pick up additional TLS hardening fixes
 // in golang.org/x/crypto (March 2024).
+
+// NOTE: mattn/go-sqlite3 requires CGO. When building locally without CGO
+// (e.g. CGO_ENABLED=0), use the modernc.org/sqlite driver instead by
+// passing the build tag: -tags sqlite_modernc
+// See: https://gitlab.com/cznic/sqlite for the pure-Go alternative.
