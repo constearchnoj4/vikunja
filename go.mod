@@ -37,7 +37,7 @@ require (
 	github.com/spf13/afero v1.11.0
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/swaggo/swag v1.16.3
 	github.com/tkuchiki/go-timezone v0.2.2
 	github.com/typesense/typesense-go v1.0.0
@@ -51,5 +51,6 @@ require (
 	xorm.io/xorm v1.3.9
 )
 
-// personal fork - bumped stretchr/testify to latest patch for assert.ErrorIs fix
+// personal fork - bumped stretchr/testify to v1.9.0 for assert.ErrorIs fix and
+// improved failure messages in table-driven tests
 // upstream issue: https://github.com/go-vikunja/vikunja/issues/XXXX
