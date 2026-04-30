@@ -64,3 +64,7 @@ require (
 // (e.g. CGO_ENABLED=0), use the modernc.org/sqlite driver instead by
 // passing the build tag: -tags sqlite_modernc
 // See: https://gitlab.com/cznic/sqlite for the pure-Go alternative.
+
+// NOTE: golang.org/x/image pinned at v0.15.0. Earlier versions (< v0.10.0)
+// are affected by CVE-2023-29407 (infinite loop in image/tiff decoder).
+// Do not downgrade without verifying the fix is present.
