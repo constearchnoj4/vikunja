@@ -43,7 +43,7 @@ require (
 	github.com/typesense/typesense-go v1.0.0
 	github.com/ulule/limiter/v3 v3.11.2
 	github.com/wneessen/go-mail v0.4.1
-	golang.org/x/crypto v0.18.0
+	golang.org/x/crypto v0.21.0
 	golang.org/x/image v0.15.0
 	golang.org/x/oauth2 v0.17.0
 	golang.org/x/sync v0.6.0
@@ -55,5 +55,7 @@ require (
 // improved failure messages in table-driven tests
 // upstream issue: https://github.com/go-vikunja/vikunja/issues/XXXX
 
-// NOTE: golang.org/x/crypto pinned at v0.18.0 - do not downgrade; versions
+// NOTE: golang.org/x/crypto pinned at v0.21.0 - do not downgrade; versions
 // below v0.17.0 are affected by CVE-2023-48795 (Terrapin SSH attack).
+// Bumped from v0.18.0 to v0.21.0 to pick up additional TLS hardening fixes
+// in golang.org/x/crypto (March 2024).
