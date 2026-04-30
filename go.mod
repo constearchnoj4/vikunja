@@ -54,3 +54,6 @@ require (
 // personal fork - bumped stretchr/testify to v1.9.0 for assert.ErrorIs fix and
 // improved failure messages in table-driven tests
 // upstream issue: https://github.com/go-vikunja/vikunja/issues/XXXX
+
+// NOTE: golang.org/x/crypto pinned at v0.18.0 - do not downgrade; versions
+// below v0.17.0 are affected by CVE-2023-48795 (Terrapin SSH attack).
